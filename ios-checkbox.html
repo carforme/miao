@@ -10,9 +10,11 @@
             background-color: rgba(0, 0, 0, 0.08);
         }
         
-        main {
-            margin: 20px auto auto 20px;
-            padding: 50px;
+        div {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: white;
         }
         
         input {
@@ -20,55 +22,55 @@
         }
         
         label {
-            margin: 20px;
+            display: inline-block;
+            width: 195px;
+            height: 110px;
+            box-sizing: border box;
+            background-color: #ffffff;
+            border-radius: 999px;
+            border: 3px solid #ddd;
+            box-shadow: 0 0 0 0px #c8fcd1 inset;
+            transition: 0.8s;
         }
         
-        div {
-            background: white;
-            width: 80px;
-            height: 80px;
-            border-radius: 80px;
-            position: relative;
-            right: -133px;
-            top: -110px;
-            pointer-events: none;
-        }
-        
-        input+label {
+        label::before {
+            content: "";
             display: block;
-            background-color: rgb(118, 214, 114);
-            width: 200px;
-            height: 100px;
-            border-radius: 50px;
+            width: 95px;
+            height: 95px;
+            border-radius: 999px;
+            background-color: white;
+            margin-left: 6px;
+            margin-top: 5px;
+            border: 2px solid #cbcbcb;
+            box-shadow: 4px 4px 3px #cbcbcb;
+            transition: 0.8s;
             cursor: pointer;
         }
         
         input:checked+label {
-            background: gainsboro;
+            background-color: #30f34c;
+            border-color: #30f34c;
+            border-width: 50px;
+            width: 100px;
+            height: 15px;
         }
         
-        input:checked~div {
-            right: -30px;
-            top: -110px;
+        input:checked+label::before {
+            margin-left: 40px;
+            margin-top: -42px;
+            transition: 0.8s;
         }
     </style>
 
 </head>
 
 <body>
-    <main>
+    <div>
         <input type="checkbox" name="" id="i1">
         <label for="i1"></label>
-        <div></div>
 
-
-
-
-
-
-    </main>
-
-
+    </div>
 
 
 </body>
