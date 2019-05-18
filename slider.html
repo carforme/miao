@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        div {
+            margin-left: 0px;
+            min-width: 500px;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        img {
+            width: 500px;
+            min-width: 500px;
+            position: relative;
+            display: none;
+        }
+        
+        label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid gray;
+            background-color: silver;
+            border-radius: 999px;
+        }
+        
+        div.b1 {
+            position: absolute;
+            top: 220px;
+            left: 400px;
+        }
+        
+        label:hover {
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        input:checked+img {
+            display: block;
+            position: absolute;
+        }
+    </style>
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="radio" name="same" id="i1">
+        <img src="https://i1.mifile.cn/a4/xmad_15574198038169_xvodz.jpg">
+        <input type="radio" name="same" id="i2">
+        <img src="https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg">
+        <input type="radio" name="same" id="i3">
+        <img src="https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg">
+        <input type="radio" name="same" id="i4">
+        <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg">
+        <input type="radio" name="same" id="i5">
+        <img src=https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg>
+
+        <div class="b1">
+            <label for="i1"></label>
+            <label for="i2"></label>
+            <label for="i3"></label>
+            <label for="i4"></label>
+            <label for="i5"></label>
+        </div>
+    </div>
+</body>
+
+</html>
