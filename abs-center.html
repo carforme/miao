@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 400px;
+            background-color: gray;
+        }
+        
+        div.inline1 {
+            text-align: center;
+            line-height: 200px;
+        }
+        
+        div.inline11 {
+            display: inline-block;
+            background-color: red;
+            height: 100px;
+            width: 200px;
+            line-height: 100px;
+        }
+        
+        div.inline2 {
+            position: relative;
+            height: 200px;
+        }
+        
+        div.inline22 {
+            position: absolute;
+            height: 100px;
+            width: 200px;
+            top: 50px;
+            left: 100px;
+            background-color: red;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>inline block</p>
+    <div class="inline1">
+        <div class="inline11">cc</div>
+    </div>
+    <p>position</p>
+    <div class="inline2">
+        <div class="inline22">sss</div>
+    </div>
+</body>
+
+</html>

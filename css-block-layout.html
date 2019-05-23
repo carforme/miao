@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        body {
+            margin: auto;
+        }
+        
+        header {
+            background-color: black;
+        }
+        
+        header p {
+            display: block;
+            color: white;
+            width: 600px;
+            margin: 15px auto 15px auto;
+        }
+        
+        div#content {
+            width: 600px;
+            margin: 15px auto 15px auto;
+        }
+        
+        section {
+            display: block;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+        
+        article div {
+            background-color: pink;
+            border: 3px solid black;
+            width: 180px;
+            height: 40px;
+            padding: 5px;
+            line-height: 40px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        article div:hover {
+            background: red;
+        }
+        
+        div:nth-child(3n+2) {
+            margin-left: 210px;
+            margin-top: -56px;
+        }
+        
+        div:nth-child(3n) {
+            margin-left: 420px;
+            margin-top: -56px;
+        }
+        
+        ul {
+            display: inline;
+        }
+        
+        li {
+            list-style-type: none;
+            border-bottom: 1px dotted;
+        }
+        
+        footer p {
+            background: green;
+            margin: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p id="header"> hello world 请调整浏览器窗口大小查看效果</p>
+    </header>
+    <div id="content">
+        <section>
+            <p>
+                页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+            </P>
+        </section>
+        <article>
+            <div>宽180高40(包含边框)</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>水平间隙30px</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>垂直间隙15px</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>边框宽度3px</div>
+            <div>产品</div>
+            <div>产品</div>
+        </article>
+        <ul>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+
+        </ul>
+    </div>
+    <footer>
+        <p>©版权所有</P>
+        <p>本页所有布局均使用块元素</P>
+    </footer>
+</body>
+
+</html>
