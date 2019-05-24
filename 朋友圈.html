@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            text-align: center;
+        }
+        
+        ul {
+            width: 400px;
+            height: 400px;
+            background-color: lightgreen;
+        }
+        
+        li {
+            list-style-type: none;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            display: inline-block;
+        }
+        
+        li:first-child:nth-last-child(2),
+        li:first-child:nth-last-child(2)~li,
+        li:first-child:nth-last-child(4),
+        li:first-child:nth-last-child(4)~li {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+    </div>
+</body>
+
+</html>

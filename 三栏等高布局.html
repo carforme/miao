@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            margin: 0px;
+            background-color: rgba(0 0 0 0.08);
+            width: 100%;
+        }
+        
+        div {
+            width: 100%;
+            background-color: gray;
+            overflow: hidden;
+            min-width: 700px;
+        }
+        
+        div>* {
+            padding-bottom: 3000px;
+            margin-bottom: -3000px;
+            /**将三栏下部分padding增加，再用负margin拉回**/
+        }
+        
+        .aside1 {
+            width: 200px;
+            float: left;
+            background-color: red;
+        }
+        
+        .aside2 {
+            float: right;
+            width: 300px;
+            background-color: lime;
+        }
+        
+        main {
+            overflow: hidden;
+            background-color: silver;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <aside class="aside1">aside1闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow:
+            hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display:
+            inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root;
+            positio 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高
+            优化：用after伪元素
+        </aside>
+        <aside class="aside2">aside2闭合浮动： 触发BFC：idden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll;
+            display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root;
+            position: absolock/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root;
+            position: absolute/fixed;ute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed;
+            缺点ell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素
+        </aside>
+        <main>main闭合浮动： 触发BFCn: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed;
+            缺点： k/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root;
+            positio 在末尾使用一个clear:both的块元inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display:
+            inline-bl float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left;
+            在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，：会生成一个行框，有一定的高度
+            fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高
+            优化：用afidden/auto/scroll; display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll;
+            display: inline-block/table-cell/table/flow-root; position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root;
+            position: absolute/fixed; float: left; 在末尾使用一个行元素生成的行框将其撑高 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素 闭合浮动： 触发BFC： overflow: hidden/auto/scroll; display: inline-block/table-cell/table/flow-root; posiidden/auto/scroll;
+            display: inline-block/table-c有一定的高度 fz0,lh0 缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用缺点：会生成一个行框，有一定的高度 fz0,lh0 在末尾使用在末尾使用一个clear:both的块元素将其撑高 优化：用after伪元素</main>
+
+    </div>
+</body>
+
+</html
