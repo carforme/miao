@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        ul {
+            list-style-type: none;
+            background-color: gray;
+            position: absolute;
+            margin-left: 0px;
+            padding: 0px;
+        }
+        
+        ul li {
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        li:hover {
+            background-color: orange;
+        }
+        
+        li:hover>ul {
+            display: block;
+        }
+        
+        ul ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+    </style>
+    <title>菜单联动</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>文件
+                <ul>
+                    <li>新建
+                        <ul>
+                            <li>aaa</li>
+                            <li>bbb</li>
+                            <li>ccc</li>
+                        </ul>
+                    </li>
+                    <li>保存</li>
+                    <li>打开</li>
+                    <li>另存为</li>
+                </ul>
+            </li>
+            <li>编辑</li>
+            <li>查找</li>
+            <li>选择</li>
+        </ul>
+    </div>
+</body>
+
+</html>
