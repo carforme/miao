@@ -7,7 +7,7 @@
     <style>
         div {
             margin-left: 0px;
-            min-width: 500px;
+            width: 500px;
         }
         
         input {
@@ -17,16 +17,12 @@
         img {
             width: 500px;
             min-width: 500px;
-            position: relative;
-            display: none;
-        }
-        
-        img#p1 {
-            display: inline-block;
             position: absolute;
+            opacity: 0;
+            transition: .6s;
         }
         
-        label {
+        .b1 label {
             display: inline-block;
             width: 10px;
             height: 10px;
@@ -47,8 +43,81 @@
         }
         
         input:checked+img {
-            display: block;
+            opacity: 1;
             position: absolute;
+        }
+        
+        .left,
+        .right {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 50px;
+            background-color: white;
+            top: 80px;
+        }
+        
+        .right {
+            left: 476px;
+        }
+        
+        .left label {
+            display: block;
+            width: 30px;
+            height: 50px;
+            display: none;
+            background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            background-position-x: 35px;
+            background-position-y: -7px;
+        }
+        
+        .right label {
+            display: block;
+            width: 30px;
+            height: 50px;
+            display: none;
+            background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            background-position: 0;
+        }
+        
+        input:nth-of-type(1):checked~.left>label:nth-child(5) {
+            display: block;
+        }
+        
+        input:nth-of-type(2):checked~.left>label:nth-child(1) {
+            display: block;
+        }
+        
+        input:nth-of-type(3):checked~.left>label:nth-child(2) {
+            display: block;
+        }
+        
+        input:nth-of-type(4):checked~.left>label:nth-child(3) {
+            display: block;
+        }
+        
+        input:nth-of-type(5):checked~.left>label:nth-child(4) {
+            display: block;
+        }
+        
+        input:nth-of-type(1):checked~.right>label:nth-child(2) {
+            display: block;
+        }
+        
+        input:nth-of-type(2):checked~.right>label:nth-child(3) {
+            display: block;
+        }
+        
+        input:nth-of-type(3):checked~.right>label:nth-child(4) {
+            display: block;
+        }
+        
+        input:nth-of-type(4):checked~.right>label:nth-child(5) {
+            display: block;
+        }
+        
+        input:nth-of-type(5):checked~.right>label:nth-child(1) {
+            display: block;
         }
     </style>
     <title>JS Bin</title>
@@ -57,8 +126,8 @@
 <body>
 
     <div>
-        <input type="radio" name="same" id="i1">
-        <img id="p1" src="https://i1.mifile.cn/a4/xmad_15574198038169_xvodz.jpg">
+        <input checked type="radio" name="same" id="i1">
+        <img src="https://i1.mifile.cn/a4/xmad_15574198038169_xvodz.jpg">
         <input type="radio" name="same" id="i2">
         <img src="https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg">
         <input type="radio" name="same" id="i3">
@@ -66,9 +135,23 @@
         <input type="radio" name="same" id="i4">
         <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg">
         <input type="radio" name="same" id="i5">
-        <img src=https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg>
+        <img src="https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg">
 
         <div class="b1">
+            <label for="i1"></label>
+            <label for="i2"></label>
+            <label for="i3"></label>
+            <label for="i4"></label>
+            <label for="i5"></label>
+        </div>
+        <div class="left">
+            <label for="i1"></label>
+            <label for="i2"></label>
+            <label for="i3"></label>
+            <label for="i4"></label>
+            <label for="i5"></label>
+        </div>
+        <div class="right">
             <label for="i1"></label>
             <label for="i2"></label>
             <label for="i3"></label>
