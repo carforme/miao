@@ -49,7 +49,7 @@
         var d = Number(prompt("please give a number d ", " "))
         console.log(parseFloat(a * (x ** 3) + b * (x ** 2) + c * x + d).toFixed(7));
     </script>
-    <script id="ch01030/08">
+    <script id="ch0103/08">
         var f = Number(prompt("please give a number f", ""));
         console.log(parseFloat(5 * (f - 32) / 9).toFixed(5));
     </script>
@@ -75,7 +75,7 @@
     </script>
     <script id="ch0103/13">
         var a = String(prompt("please give a number ", " "));
-        var a1 = " ";
+        var a1 = "";
         for (i = a.length - 1; i >= 0; i--)
             a1 = a1 + a[i];
         console.log(a1);
@@ -159,7 +159,7 @@
         var N = prompt("please give a number", "");
         String.fromCharCode(N);
         if (!(N % 2 == 0)) {
-            console.log("yes");
+            console.log("YES");
         } else console.log("No");
     </script>
     <script id="ch0104/05">
@@ -188,37 +188,37 @@
     <script id="ch0104/08">
         var x = prompt("please give a number ", " ");
         if (x % 3 === 0 && x % 5 === 0) {
-            console.log("YES ");
+            console.log("YES");
         } else
-            console.log("NO ");
+            console.log("NO");
     </script>
     <script id="ch0104/09">
         var x = prompt("please give a number ", " ");
         switch (true) {
             case x % 3 === 0 && x % 5 === 0 && x % 7 === 0:
-                console.log("3 5 7 ");
+                console.log(" 35 7");
                 break;
 
             case x % 3 === 0 && x % 5 === 0:
-                console.log("3 5 ");
+                console.log("3 5");
                 break;
             case x % 3 === 0 && x % 7 === 0:
-                console.log("3 7 ");
+                console.log("3 7");
                 break;
             case x % 5 === 0 && x % 7 === 0:
-                console.log("5 7 ");
+                console.log("5 7");
                 break;
             case x % 3 === 0:
-                console.log("3 ");
+                console.log("3");
                 break;
             case x % 5 === 0:
-                console.log("5 ");
+                console.log("5");
                 break;
             case x % 7 === 0:
-                console.log("7 ");
+                console.log("7");
                 break;
             default:
-                console.log("\ 'n\' ");
+                console.log("\'n\'");
                 break;
         }
         /**给定一个整数，判断它能否被3，5，7整除，并输出以下信息：
@@ -238,17 +238,17 @@
     <script id="ch0104/11">
         var x = prompt("please give a number ", " ");
         if (x == 3 || x == 5 || x == 7) {
-            console.log("NO ")
+            console.log("NO")
         } else
-            console.log("YES ");
+            console.log("YES");
     </script>
     <script id="ch0104/12">
         var x = prompt("please give a number ", " ");
         if ((x / 1.2) === ((x / 3) + 50)) {
-            console.log("All ");
+            console.log("All");
         } else if ((x / 1.2) > ((x / 3) + 50)) {
-            console.log("Bike ")
-        } else console.log("Walk ")
+            console.log("Bike")
+        } else console.log("Walk")
     </script>
     <script id="ch0104/13">
         var x = prompt("please give a number ", " ");
@@ -267,14 +267,14 @@
     <script id="ch0104/14">
         var x = prompt("please give a number ", " ");
         var m = prompt("please give a n/y ", " ");
-        var n = "n ",
-            y = "y ";
+        var n = "n",
+            y = "y";
 
         switch (true) {
-            case x <= 1000 && m == n:
+            case x <= 1000 && m === n:
                 console.log(8);
                 break;
-            case x <= 1000 && m == y:
+            case x <= 1000 && m === y:
                 console.log(13);
                 break;
             case x > 1000 && m === n:
@@ -304,25 +304,25 @@
         var list = [x, y, z];
         switch (true) {
             case x + y > z && Math.abs(x - y) < z:
-                console.log("yes ");
+                console.log("yes");
                 break;
             case x + z > y && Math.abs(x - z) < y:
-                console.log("yes ");
+                console.log("yes");
                 break;
             case z + y > x && Math.abs(z - y) < x:
-                console.log("yes ");
+                console.log("yes");
                 break;
             default:
-                console.log("no ");
+                console.log("no");
                 break;
         }
     </script>
     <script id="ch0104/17">
         var theYear = prompt("pick a number ", "请输入查询年份 ");
         if ((theYear % 4 === 0) && (!(theYear % 100 === 0)) || (theYear % 400 === 0)) {
-            console.log("Y ");
+            console.log("Y");
         } else
-            console.log("N ");
+            console.log("N");
     </script>
     <script id="ch0104/18">
         var x = Number(prompt("please give a number ", " "));
@@ -383,17 +383,17 @@
                 var x1 = (-b + s_delta) / 2 / a
 
                 var x2 = (-b - s_delta) / 2 / a
-                console.log("x1=" + x1, " x2=" + x2)
+                console.log(x1, x2)
             } else {
                 delta < 0
                 var s_delta = Math.sqrt(-delta)
                 var x1 = parseFloat((-b) / (2 * a)).toFixed(6) + '+' + parseFloat(s_delta / (2 * a)).toFixed(6) + 'i'
                 var x2 = parseFloat((-b) / (2 * a)).toFixed(6) + '-' + parseFloat(s_delta / (2 * a)).toFixed(6) + 'i'
-                console.log(" x1=" + x1, " x2=" + x2)
+                console.log(x1, x2)
             }
         }
     </script>
-    <script id=" ch0104/21">
+    <script id="ch0104/21">
         var n = Number(prompt("please give a number ", " "));
         var x = Number(prompt("please give a number ", " "));
         var y = Number(prompt("please give a number ", " "));
