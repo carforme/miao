@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>画图</title>
+    <style>
+        canvas {
+            border: 2px solid #f0f;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="400" height="300"></canvas>
+</body>
+<script>
+    var canvas = document.querySelector('canvas')
+    canvas.style.imageRendering = 'pixelated'
+    var ctx = canvas.getContext('2d')
+
+    function dot(x, y, color = 'black') {
+        ctx.fillStyle = color
+        ctx.fillRect(x, y, 1, 1)
+    }
+    /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+    // YOUR CODE GOES BELOW
+    for (i = 0; i < 1000; i++) {
+        dot(i, 10, color = 'black');
+    }
+    for (i = 0; i < 1000; i++) {
+        if (i % 2 == 0) {
+            dot(i, 50, color = 'red');
+        }
+    }
+    for (i = 0; i < 1000; i++) {
+        dot(4 * i + 0, 60, color = 'red');
+        dot(4 * i + 1, 60, color = 'red');
+    }
+    for (i = 0; i < 1000; i++) {
+        dot(5 * i + 0, 65, color = 'red');
+        dot(5 * i + 1, 65, color = 'red');
+        dot(5 * i + 2, 65, color = 'red');
+    }
+    for (i = 0; i < 1000; i++) {
+        dot(i + 100, i, color = 'black');
+        dot(i - 200, -i + 500, color = 'black');
+
+    }
+    for (i = 0; i < 1000; i++) {
+        dot(i, 0.75 * i, color = 'red');
+    }
+    for (i = 250; i < 350; i++) {
+        dot(i, 50, color = 'black');
+        dot(i, 100, color = 'black');
+    }
+    for (i = 50; i < 100; i++) {
+        dot(250, i, color = 'black');
+        dot(350, i, color = 'black');
+    }
+
+    //画一个实心矩形
+    for (i = 100; i < 200; i++) {
+        for (j = 100; j < 200; j++)
+            dot(i, j, color = 'lime');
+    }
+
+
+
+
+
+
+
+
+    for (i = 20; i <= 80; i++) {
+        for (j = 20; j <= 80; j++) {
+            for (z = 860; z <= 940; z++)
+                if ((z === ((i - 50) ** 2 + (j - 50) ** 2)))
+                    dot(i, j, color = 'red');
+
+        }
+    }
+    /**for (i = 0; i <= 1000; i++) {
+        for (j = 0; j <= 1000; j++) {
+            if ((900 === ((i - 50) ** 2 + (j - 50) ** 2)))
+                dot(i, j, color = 'black');
+            for (z = 0; z <= 300; z++)
+                if ((z === ((i - 50) ** 2 + (j - 50) ** 2)))
+                    dot(i, j, color = 'black');
+        }
+    }**/
+    //画一个大小合适的sin(x)的图像
+    for (i = 0; i < 500; i++) {
+        dot(i, 220, color = 'blue');
+    }
+    for (i = 0; i < 500; i++) {
+        dot(i, 220 + 20 * (Math.sin(Math.PI / 60 * i)), color = 'red');
+    }
+    console.log(Math.sin(Math.PI / 180 * i));
+
+    var lineGradient = ctx.createLinearGradient(0, 0, 50, 50);
+
+    lineGradient.addColorStop(0, 'rgba(255,0,0,1)');
+    lineGradient.addColorStop(0.3, 'rgba(255,100,100,1)');
+    lineGradient.addColorStop(0.7, 'rgba(255,200,200,1)');
+    lineGradient.addColorStop(1, 'rgba(220,255,0,1)');
+    ctx.fillStyle = lineGradient;
+    ctx.fillRect(0, 0, 50, 50);
+</script>
+
+</html>

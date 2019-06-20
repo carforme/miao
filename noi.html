@@ -1111,6 +1111,276 @@
         console.log(sum1 + (n - sum) * count)
         console.log();
     </script>
+    <script id="7">
+        var n = Number(prompt("please give a number", ""));
+        if ((n % 7) == 0 || (n % 10) == 7) {
+            console.log("YES");
+        } else
+            console.log("NO");
+        /**var isRelatedWith7 = function(n) {
+  if (n % 7 == 0) {
+    return true
+  } else {
+    while (n > 0) {
+      var digit = n % 10
+      if (digit == 7) {
+        return true
+      }
+      n = (n - digit) / 10
+    }
+    return false
+  }
+}
+
+var getNumber = function(hint) {
+  return +prompt(hint)
+}
+
+
+var num = getNumber('请输入')
+
+if (isRelatedWith7(num)) {
+  console.log('YES')
+} else {
+  console.log('NO')
+}
+**/
+        /**for(var a = 0; a < 7; a++) {
+        for(var b = 0; b < 7; b++) {
+            for(var c = 0; c < 7; c++) {
+            var base7 = a * 49 + b * 7 + c
+            var base9 = c * 81 + b * 9 + a
+            if (base9 == base7) {
+                console.log(base7, '' + a + b + c, '' + c + b + a)
+            }
+            }
+        }
+        }
+**/
+    </script>
+    <script id="sort">
+        var x = Number(prompt("please give a number", ""));
+        var y = Number(prompt("please give a number", ""));
+        var z = Number(prompt("please give a number", ""));
+        if (x - y > z - y) {
+            if (y < z) {
+                console.log(y, z, x)
+            }
+            if (y > x) {
+                console.log(z, x, y)
+            } else
+                console.log(z, y, x)
+        }
+        if (x - y < z - y) {
+            if (y > z) {
+                console.log(x, z, y)
+            }
+            if (y < x) {
+                console.log(y, x, z)
+            } else
+                console.log(x, y, z)
+        }
+    </script>
+    <script id="narcissistic">
+        var n = m = z = Number(prompt("please give a number", ""));
+        var sum = count = 0;
+        for (i = 0; n >= 1; i++) {
+            n = n / 10;
+            count++;
+        }
+        for (j = 1; j <= i; j++) {
+            sum = sum + ((m % 10) ** count);
+            m = parseInt(m / 10);
+        }
+        if (sum == z) {
+            console.log("YES");
+        } else
+            console.log("NO");
+    </script>
+    <script id="narcissistics">
+        var z, m, n;
+
+        for (m = 100; m <= 1000; m++) {
+            var sum = count = 0;
+            z = n = m;
+            while (m >= 1) {
+                m = (m / 10);
+                count++;
+            }
+            m = z;
+            for (j = 1; j <= count; j++) {
+                sum = sum + ((n % 10) ** count);
+                n = parseInt(n / 10);
+            }
+            if (sum === z) {
+                console.log(z);
+            }
+        }
+    </script>
+    <script id="palindrom">
+        var n = m = Number(prompt("please give a number", ""));
+        var sum = 0;
+        while (n > 0) {
+            var z = n % 10;
+            sum = sum * 10 + z;
+            n = (n - z) / 10;
+        }
+        if (m === sum) {
+            console.log("YES");
+        } else
+            console.log("NO");
+        /** var digit = n % 10;
+        sum = sum * 10 + digit;
+        n = (n - digit) / 10;**/
+    </script>
+    <script id="complete - number">
+        var n = m = Number(prompt("please give a number", ""));
+        var sum = 0;
+        for (i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum = sum + i;
+            }
+        }
+        if (n == sum) {
+            console.log("YES");
+        } else
+            console.log("NO")
+    </script>
+    <script id="complete - numbers">
+        var sum = 0;
+        for (i = 1; i <= 1000; i++) {
+            sum = 0;
+            for (j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    sum = sum + j;
+                }
+            }
+            if (i == sum) {
+                console.log(i);
+            }
+        }
+        /**var isPalindrom = function(n) {
+  var width = getDigitWidth(n)
+
+
+  for (var i = 1; i <= n / 2; i++) {
+    var right = Math.floor(n / power(10, i - 1)) % 10
+    var left = Math.floor(n / power(10, width - i)) % 10
+
+    if (right !== left) {
+      return false
+    }
+  }
+
+  return true
+}
+
+
+var isPalindrom2 = function(n) {
+  var sum = 0
+  var m = n
+
+  while (n > 0) {
+    var digit = n % 10
+    sum = sum * 10 + digit
+    n = (n - digit) / 10
+  }
+
+  return sum == m
+}
+**/
+    </script>
+    <script id="lcf & lcm">
+        var n = Number(prompt("please give a number", ""));
+        var m = Number(prompt("please give a number", ""));
+
+        for (i = (n >= m ? m : n);; i--) {
+            if (m % i == 0 && n % i == 0) {
+                console.log(i);
+                break;
+            }
+        }
+        for (j = (n >= m ? n : m);; j++) {
+            if (j % m == 0 && j % n == 0) {
+                console.log(j);
+                break;
+            }
+        }
+    </script>
+    <script id="itob">
+        console.log(prompt());
+    </script>
+    <script id="weekday">
+        var x = Number(prompt("年份"));
+        var m = Number(prompt("月份"));
+        if ((x % 4 === 0) && (!(x % 100 === 0)) || (x % 400 === 0)) {
+            list = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        } else {
+            list = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        }
+        sum = 0;
+        for (i = 0; i < m - 1; i++) {
+            sum = sum + list[i];
+        }
+        z = (((x - 1) + parseInt((x - 1) / 4)) - parseInt((x - 1) / 100) + parseInt((x - 1) / 400) + sum + 1) % 7;
+        var name = ["天", "一", "二", "三", "四", "五", "六"]
+        console.log("星期" + name[z * 2]);
+    </script>
+    <script id="sqrt">
+        var x = Number(prompt("number"));
+        //牛顿法开平方
+        function sqrt(n) {
+            var x = 2
+            x = x - (x * x - n) / (2 * x)
+            x = x - (x * x - n) / (2 * x)
+            x = x - (x * x - n) / (2 * x)
+            x = x - (x * x - n) / (2 * x)
+            x = x - (x * x - n) / (2 * x)
+            return x
+        }
+        console.log(sqrt(x));
+    </script>
+    <script id="prime">
+        var x = Number(prompt("素数"));
+
+        var isPrime = function(n) {
+            if (n < 2) {
+                return false
+            }
+            var sqrt_n = Math.floor(Math.sqrt(n))
+            for (var i = 2; i <= sqrt_n; i++) {
+                if (n % i == 0) {
+                    return false
+                }
+            }
+            return true
+        }
+        if (isPrime(x)) {
+            console.log("YES");
+        } else
+            console.log("NO");
+    </script>
+    <script id="primes">
+        var isPrime = function(n) {
+            if (n < 2) {
+                return false
+            }
+            var sqrt_n = Math.floor(Math.sqrt(n))
+            for (var i = 2; i <= sqrt_n; i++) {
+                if (n % i == 0) {
+                    return false
+                }
+            }
+            return true
+        }
+        for (var m = 1; m < 100; m++) {
+            k = m;
+            if (isPrime(m)) {
+                console.log(k);
+            }
+        }
+    </script>
 </body>
 
 </html>
