@@ -1254,10 +1254,9 @@ if (isRelatedWith7(num)) {
                     sum += i
                 }
             }
-
             return sum == n
         }
-        for (var i = 3; i <= 1000; i++) {
+        for (var i = 3; i <= 1000 / 2; i++) {
             if (isCompleteNumer2(i)) {
                 console.log(i);
             }
@@ -1344,7 +1343,7 @@ var isPalindrom2 = function(n) {
 
             return x
         }
-        console.log(sqrt(x.toFixed(3)));
+        console.log(sqrt(x).toFixed(3));
     </script>
     <script id="prime">
         var x = Number(prompt("素数"));
