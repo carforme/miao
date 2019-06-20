@@ -1233,7 +1233,7 @@ if (isRelatedWith7(num)) {
         sum = sum * 10 + digit;
         n = (n - digit) / 10;**/
     </script>
-    <script id="complete - number">
+    <script id="complete-number">
         var n = m = Number(prompt("please give a number", ""));
         var sum = 0;
         for (i = 1; i < n; i++) {
@@ -1246,7 +1246,7 @@ if (isRelatedWith7(num)) {
         } else
             console.log("NO")
     </script>
-    <script id="complete - numbers">
+    <script id="complete-numbers">
         var sum = 0;
         for (i = 1; i <= 1000; i++) {
             sum = 0;
@@ -1290,7 +1290,7 @@ var isPalindrom2 = function(n) {
 }
 **/
     </script>
-    <script id="lcf & lcm">
+    <script id="lcf&lcm">
         var n = Number(prompt("please give a number", ""));
         var m = Number(prompt("please give a number", ""));
 
@@ -1323,7 +1323,7 @@ var isPalindrom2 = function(n) {
         for (i = 0; i < m - 1; i++) {
             sum = sum + list[i];
         }
-        z = (((x - 1) + parseInt((x - 1) / 4)) - parseInt((x - 1) / 100) + parseInt((x - 1) / 400) + sum + 1) % 7;
+        var z = (((x - 1) + parseInt((x - 1) / 4)) - parseInt((x - 1) / 100) + parseInt((x - 1) / 400) + sum + 1) % 7;
         var name = ["天", "一", "二", "三", "四", "五", "六"]
         console.log("星期" + name[z * 2]);
     </script>
@@ -1332,6 +1332,8 @@ var isPalindrom2 = function(n) {
         //牛顿法开平方
         function sqrt(n) {
             var x = 2
+            x = x - (x * x - n) / (2 * x)
+            x = x - (x * x - n) / (2 * x)
             x = x - (x * x - n) / (2 * x)
             x = x - (x * x - n) / (2 * x)
             x = x - (x * x - n) / (2 * x)
@@ -1383,4 +1385,4 @@ var isPalindrom2 = function(n) {
     </script>
 </body>
 
-</html>
+</html>s
