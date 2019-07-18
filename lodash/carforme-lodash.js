@@ -48,7 +48,7 @@ var carforme = {
             return array
         } else {
             for (var i = 0; i < array.length; i++) {
-                for (var j = array.length - 1; j < values.length; j++) {
+                for (var j = array.length; j < values.length; j++) {
                     if (array[i] == values[j]) {
                         var flag = false
                     }
